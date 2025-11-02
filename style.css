@@ -1,0 +1,117 @@
+:root {
+    --primary-color: #2196F3;
+    --light-bg: #f7f7fc;
+    --card-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+body, html, .w3-main {
+    background: linear-gradient(135deg, var(--light-bg) 0%, #e0e0f0 100%) !important;
+    font-family: Arial, sans-serif;
+}
+
+.w3-card-modern {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+    padding: 15px;
+}
+
+.w3-input, .w3-select {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.w3-input:focus, .w3-select:focus {
+    border-color: var(--primary-color) !important;
+    box-shadow: 0 0 0 1px rgba(33, 150, 243, 0.5);
+}
+
+.profile-img-container {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.profile-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid var(--primary-color);
+    padding: 4px;
+    background-color: white;
+    display: inline-block;
+}
+
+.w3-button-save {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+    border-radius: 6px;
+    margin-right: 10px;
+    padding: 10px 20px;
+}
+
+.w3-button-cancel {
+    background-color: #A9A9A9 !important;
+    color: white !important;
+    border-radius: 6px;
+    padding: 10px 20px;
+}
+
+.w3-table-header-custom {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+}
+
+.action-icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    opacity: 0.7;
+    padding: 4px;
+    transition: opacity 0.2s, transform 0.2s;
+}
+.action-icon:hover {
+    opacity: 1;
+    transform: scale(1.2);
+}
+.edit-icon { color: #2196F3; }   /* blue */
+.delete-icon { color: #f44336; } /* red */
+
+.w3-search-bar {
+    border-radius: 25px;
+    padding-left: 15px;
+    height: 40px;
+    border: 1px solid #ddd;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.tbl-profile {
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+/* MOBILE RESPONSIVE */
+@media screen and (max-width: 768px) {
+    .w3-third, .w3-twothird { width: 100% !important; margin-bottom: 20px; }
+    .w3-table-all { display: block; overflow-x: auto; white-space: nowrap; }
+    .w3-table-all th, .w3-table-all td { padding: 8px; }
+    .w3-search-bar { margin-bottom: 10px; }
+
+    /* Hide standard columns on mobile */
+    .hide-mobile { display: none !important; }
+    /* Show combined columns on mobile */
+    .show-mobile { display: table-cell !important; }
+}
+
+/* DESKTOP/LARGE SCREENS: hide mobile-specific columns */
+@media screen and (min-width: 769px) {
+    .show-mobile { display: none !important; }
+    .hide-mobile { display: table-cell !important; }
+}
